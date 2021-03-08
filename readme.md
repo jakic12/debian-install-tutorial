@@ -152,4 +152,19 @@ sudo systemctl enable --now logid
 ### Konsole does not open bold fonts
 https://www.reddit.com/r/kde/comments/8cvffo
 
-Remove all occurences of `Regular` in 
+Remove all occurences of `Regular` in `~/.config/kdeglobals`
+
+### Vscode C\# Omnisharp not loading (Unity)
+
+[Stack overflow link for solution](https://stackoverflow.com/questions/54380924/reference-assemblies-for-framework-netframework-version-v4-7-1-were-not-found)  
+
+Problem:  
+*	Omni sharp wouldn't load
+
+Solution:
+1.	Install [`mono`](https://www.mono-project.com/download/preview/#download-lin)
+2.	In vscode `settings.json` set:
+
+```json  
+"omnisharp.useGlobalMono": "always"  
+```
